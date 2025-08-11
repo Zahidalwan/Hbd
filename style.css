@@ -1,0 +1,122 @@
+body {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.card .gif {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: #ff4d6d;
+  font-size: 1.8em;
+}
+
+p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+button {
+  background: #ff80ab;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4081;
+}
+
+.surprise {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: top 0.5s ease-in-out;
+}
+
+.surprise.show {
+  top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 🔹 Responsive Settings */
+@media (max-width: 600px) {
+  .card {
+    padding: 15px;
+  }
+
+  .card .gif {
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  .surprise {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .card .gif {
+    width: 70px;
+  }
+}
